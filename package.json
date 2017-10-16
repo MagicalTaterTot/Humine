@@ -1,0 +1,34 @@
+{
+  "name": "humine",
+  "version": "1.0.0",
+  "description": "Website for Humine nonprofit",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.7.1",
+    "webpack-dev-server": "^2.9.2"
+  },
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagicalTaterTot/Humine.git"
+  },
+  "author": "Jason Liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MagicalTaterTot/Humine/issues"
+  },
+  "homepage": "https://github.com/MagicalTaterTot/Humine#readme"
+}
