@@ -38,8 +38,8 @@ export default class Header extends React.Component {
         links = { links }
       />);
     };
-    console.log(buttons.length)
     return (
+
       <div className="headerContainer">
         { buttons }
       </div>
@@ -53,8 +53,8 @@ class NavElement extends React.Component {
    const type = this.props.type
    if(type.toUpperCase() === "TEXT") {
      return (
-       <div>
-        <p>
+       <div className="element-container">
+        <p className="element">
           { this.props.content }
         </p>
        </div>
@@ -63,19 +63,17 @@ class NavElement extends React.Component {
    // Add in the rest of the link stuff
   if(type.toUpperCase() === "DROPDOWN") {
     var dropdownLinks = []
-    for (var value in this.props.values) {
-      for (var link in this.props.links) {
-        dropdownLinks.push(
-          <Link className="dropdown-item" to={ ("/:link") }>{ value }</Link>
-        );
-      };
+    for (var i = 0; i < this.props.values.length; i++) {
+      dropdownLinks.push(
+        <a className="dropdown-item">{ this.props.values[i] }</a>
+      );
+
     };
-    console.log(dropdownLinks)
     return (
-      <div className="btn-group">
-      <button className="btn dropdown-toggle">Butt-on</button>
-        <div className="dropdown-menu">
-          { dropdownLinks }
+      <div className="dropdown element-container">
+        <a className="element">Butt-on</a>
+        <div className="dropdown-content">
+            { dropdownLinks }
         </div>
       </div>
     )
